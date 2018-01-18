@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Dynamic Ship Sheets Form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+	
+</head>
+
+	
+<body>
+<script src='ships.js'></script>
+<div id="page-setup">
+	Page Width:&nbsp <input type="text" name="pwidth" id="pwidth"> <br>
+	Page Height: <input type="text" name="pheight" id="pheight"> <br><br>
+	Page Margin: <input type="text" name="pmargin" id="pmargin">
+	<hr>
+</div>
+<div id="ships-list">
+<table id="ships_table">
+	<tr>
+		<th>Ship</th>
+		<th>Quantity</th>
+		<th>Gearbox</th>
+	</tr>
+</table>
+<button onclick="buildSheets()">Build Sheets</button>
+<button onclick="makePdf()" id="download">download</button>
+<img id="thisimg"/>
+<!--<canvas id="myCanvas" width="2550" height="3300"
+style="border:1px solid #000000;">
+</canvas> -->
+
+</div>
+
+</body>
+</html>
